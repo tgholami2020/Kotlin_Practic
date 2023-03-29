@@ -5,7 +5,7 @@ class Animal2(){
     var age: Int= 3
 }
 fun main(){
-    val animal: Animal2 ? = null
+    val animal: Animal2 ? = Animal2()
 
     val newAge=animal?.run {             //call ?. safe call, means if the animal is null not to print the properties
         println(this.name)
