@@ -6,7 +6,7 @@ interface ICardCasBack{
 }
 
 
-enum class CreditType(val color:String,val maxLimit:Int= 1000000) :ICardCasBack{                 //enum class inherit can interface
+enum class CreditType(val color:String,val maxLimit:Int= 1000000) :ICardCasBack{                 //enum class can inherit interface
     //enum constants
     SILVER("gray", 5000) {               //ordinal 0      //name "SILVER"
         override fun getCashBack(): Float = 0.02f
