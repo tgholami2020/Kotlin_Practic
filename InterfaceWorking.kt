@@ -17,7 +17,7 @@ interface myFirstInterface {                        //you cant create instance o
             println("the 2 interface is touched!")
         }
 
-        class MyButton : myFirstInterface,mySecondInterface{
+        class MyButton : myFirstInterface,mySecondInterface{               // we can inherit multiple interfaces
             override fun Onclick() {
                 println("the button is clicked")
             }
