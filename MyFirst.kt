@@ -1,6 +1,6 @@
-@file:JvmName("myKotlinFile")
+@file:JvmName("myKotlinFile")                      //annotation for naming kotlin file
  fun main(){
-    val area=MyJavaFile.findArea(4,5)
+    val area=MyJavaFile.findArea(4,5)              //calling java method inside kotlin file
      println("printing Area from java class $area")
  }
 
