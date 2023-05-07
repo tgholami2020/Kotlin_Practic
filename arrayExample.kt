@@ -5,8 +5,9 @@ fun main(){
     println(interestingThings[0])
     println(interestingThings.get(2))
 
-    for (i in interestingThings){
-        println(i)
+    //work  withforEach
+    interestingThings.forEach {
+        println(it)
     }
 
 }
