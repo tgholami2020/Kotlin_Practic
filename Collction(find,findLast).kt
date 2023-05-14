@@ -8,7 +8,7 @@ fun main(){
     val last = words.findLast { it.startsWith("some")}
     val nothing= words.find { it.contains("nothing") }
 
-    println("the first word start with some is $first")
+    println("the first word start with  some is $first")
     println("the last word start with some is $last")
     println("the first word containing nothing is $nothing")
 }
