@@ -13,6 +13,8 @@ fun main(){
 
     val reduce= calculate( 10,7,{a,b-> a-b})         //invoke the higher order function passing in a lambda as a function argument
 
-    println("sum Result is: $sumResult multiple result is: $multipleResult reduce result is: $reduce")
+    val remider= calculate(10,2,{a,b -> a%b})        //invoke the higher order function passing in a lambda as a function argument
+
+    println("sum Result is: $sumResult multiple result is: $multipleResult reduce result is: $reduce reminder is: $remider")
 
 }
