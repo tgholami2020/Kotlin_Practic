@@ -1,14 +1,14 @@
 
 fun main(){
-    //mySum
-val result= mySum()
+    //mySum using for loop
+    val result= mySum()
     println(result)
 
-    //secondIterator
+    //secondIterator using while iterator
     val whileIterator= secondIteratorUsingWhile()
     println(whileIterator)
 
-    //doWhile
+    //doWhile iterator
     val doWhile= doWhile()
     println(doWhile)
 }
@@ -35,5 +35,5 @@ fun doWhile(){
         sum+=num
         num--
     }while (num>0)
-    println("sum of numbers is $sum")
+    println("sum of numbers is $sum")             //sum is 15
 }
