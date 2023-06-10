@@ -1,6 +1,6 @@
 class User2(val map: Map<String, Any?>) {
-    val name: String by map                // 1
-    val age: Int     by map                // 1
+    val name: String by map
+    val age: Int     by map
 }
 
 fun main() {
