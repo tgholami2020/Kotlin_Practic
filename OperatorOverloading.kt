@@ -17,6 +17,13 @@ val handler= Handlers()                                                 //consta
     println(--customPoint)
     println(customPoint--)
     println(customPoint)
+    println("*********************")
+    val textA=SomeText("123")
+    val textB=SomeText("456")
+    println(textA < textB)
+    println(textA > textB)
+    println(textA <= textB)
+    println(textA >= textB)
 
 }
 class Handlers(){
@@ -35,8 +42,13 @@ data class SomeText(
 
     operator fun not(): SomeText=
         SomeText((this.value.reversed()))
-}
 
+    operator fun compareTo(otherValue: SomeText): Int{
+        val thisLength= this.value.length
+        val otherValueLength= otherValue.value.length
+        return thisLength - otherValueLength
+    }
+}
 data class CustomPoint(
     val x: Int,
     val y: Int
@@ -47,3 +59,4 @@ data class CustomPoint(
     operator fun dec(): CustomPoint=
         CustomPoint(this.x - 1,this.y - 1)
 }
+
