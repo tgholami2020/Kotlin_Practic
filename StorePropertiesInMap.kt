@@ -9,5 +9,5 @@ fun main() {
         "age"  to 25
     ))
 
-    println("name = ${user.name}, age = ${user.age}")
+    //println("name = ${user.name}, age = ${user.age}")
 }
