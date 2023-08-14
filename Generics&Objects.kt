@@ -1,7 +1,17 @@
 
 fun main(){
-    println("${Quiz.answered} of ${Quiz.total} answered")
+  println(Quiz.printProgressBar())
 }
+val Quiz.StudentProgress.progressText: String            //add an extension property
+    get() = "${answered} of ${total} answered"
+
+fun Quiz.StudentProgress.printProgressBar(){
+    repeat(Quiz.answered) {print("*")}
+    repeat(Quiz.total - Quiz.answered) {print("0")}
+    println()
+    println(Quiz.progressText)
+}
+
 class Quiz{
     val question1= Question<String>("What is the ambivalent means?","having mix feeling",Difficulty.EASY)
     val question2= Question<Boolean>("Is the sky green?",false,Difficulty.MEDIUM)
