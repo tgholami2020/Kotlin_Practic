@@ -24,4 +24,22 @@ fun main(){
     for (planet in solarSystem){
         println(planet)
     }
+    //working with map
+    val colorBox= mutableMapOf(
+        "White" to 0,
+        "Orange" to 1,
+        "Red" to 2,
+        "Blue" to 3,
+        "Green" to 4,
+        "Yellow" to 5
+    )
+    println(colorBox.size)                   //print the size of map
+    colorBox["Black"] = 6                    //add new key-value to the map
+    println(colorBox)
+    println(colorBox["Red"])                 //accessing the value by key
+    println(colorBox.get("Purple"))          //print null if no key found in the map
+    colorBox.remove("Black")             //remove an element from map
+    println(colorBox)
+    colorBox["Blue"]= 6                      //modifying the value of Blue from 3 to 6
+    println(colorBox)
 }
