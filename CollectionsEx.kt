@@ -1,6 +1,6 @@
 
 fun main(){
-    //working with array
+    //working with Array
     val names =arrayOf<String>("Sakina","Razia","Tahira","Amir","Zahra")
     println(names[0])
     names[3]="Amir Taha"
@@ -10,7 +10,7 @@ fun main(){
     for (myName in names){
         println( " list of names are : $myName" )
     }
-    //working with list
+    //working with List
     val solarSystem = mutableListOf<String>("Mercury", "Venus", "Earth")
     println(solarSystem.size)
 
@@ -24,7 +24,18 @@ fun main(){
     for (planet in solarSystem){
         println(planet)
     }
-    //working with map
+
+    //working with Set
+    val myFavorite= mutableSetOf("Painting","Meditation","Reading","Programming","Designing")
+    println("This are my Set of Favorites: $myFavorite")
+    myFavorite.add("Swimming")                       //add new value to the set
+    println(myFavorite)                              //add Swimming to the set
+    println(myFavorite.contains("Sleeping"))         //contain method check if the specified element is contained in the set or no,return false if not found
+    println(myFavorite.add("Reading"))               //we cant have duplicated value in the Set...print false
+    myFavorite.remove("Reading")             // Remove an element from Set
+    println(myFavorite)
+
+    //working with Map
     val colorBox= mutableMapOf(
         "White" to 0,
         "Orange" to 1,
