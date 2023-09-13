@@ -1,34 +1,31 @@
 
 fun main(){
-    val coins: (Int)-> String={ it->
-        "$it quarters"
-    }
-    val cupCake:(Int)-> String={it->
-        "Have a cupcake"
-    }
-    val treatFunction= trickOrTreat(false, { "$it quarters" })               //remove coins name and write lambda expression instead
-    val trickFunction= trickOrTreat(true,null)
-    //repeat() is a higher order function that work like a loop
-    repeat(4){
-        treatFunction()
-    }
-    trickFunction()
-}
-// a function can return another function/pass function as an argument
-fun trickOrTreat(isTrick: Boolean,extraTreat:((Int)-> String)?):() -> Unit{
-    if(isTrick){
-        return trick
-    }else{
-        if (extraTreat!=null){
-            println(extraTreat(5))
-        }
-        return treat
+    println(sumFun(2,4))
+    println(addTwoNumber(3,7))
+    myName("Tahira")
+    name("Tahira Gholami")
+
+    //trailing lambda, having a function as a parameter
+    enhanceMessage("Hello there,"){
+        print(it)
+        add(12,13)
     }
 }
-val trick={
-    println("No treads!")
+
+fun sumFun (a:Int, b:Int): Int{
+    return a+b
 }
-//use functions as data type
-val treat:() ->Unit ={
-    println("Have a treat!")
+//val LambdaName : Type = {ParametersList -> codeBody}
+ val addTwoNumber : (Int,Int) ->Int = {a,b -> a+b}                  //change the sumFun to a lambda
+
+//let's write a lambda with no return type
+fun myName(name: String){
+    println(name)
+}
+val name : (String)-> Unit ={
+    println("my name is $it")
+}
+
+fun enhanceMessage( message: String, funAsParameter:(String)-> Int){
+    println("$message ${funAsParameter("Hey")}")
 }
